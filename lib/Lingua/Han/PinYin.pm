@@ -2,7 +2,7 @@ package Lingua::Han::PinYin;
 
 use strict;
 use vars qw($VERSION);
-$VERSION = '0.02';
+$VERSION = '0.03';
 
 use Encode;
 use File::Spec;
@@ -34,8 +34,12 @@ sub han2pinyin {
 	my @result;
 	foreach my $code (@code) {
 		my $value = $self->{'py'}->{$code};
-		$value =~ s/\d//isg unless ($self->{'tone'});
-		$value = 'XX' unless($value); # in case
+		if (defined $value) {
+			$value =~ s/\d//isg unless ($self->{'tone'});
+		} else {
+			# if it's not a Chinese, return original word
+			$value = pack("U*", hex $code);
+		}
 		push @result, lc $value;
 	}
 	
@@ -68,6 +72,7 @@ Lingua::Han::PinYin - Retrieve the Mandarin(PinYin) of Chinese character(HanZi).
   print $h2p->han2pinyin("我"); #wo3
   my @result = $h2p->han2pinyin("爱你"); # @result = ('ai4', 'ni3');
   print $h2p->han2pinyin("林道"); #lin2dao4
+  print $h2p->han2pinyin("I love 余瑞华 a"); #i love yuruihua a
 
 =head1 DESCRIPTION
 
@@ -81,7 +86,7 @@ if the character is polyphone(DuoYinZi), we can B<NOT> point out the correct one
 
 Usually, it returns its pinyin/spell. It includes more than 20,000 words (from Unicode.org Unihan.txt, version 4.1.0).
 
-if not(I mean it's not a Chinese character), it returns 'XX';
+if not(I mean it's not a Chinese character), returns the original word;
 
 =head1 OPTION
 
@@ -93,7 +98,7 @@ If you are in 'Unicode Editing' mode, plz set this to utf8, otherwise('ASCII Edi
 
 =item tone => 1|0
 
-default is 0. if u need the tone, plz set this to 1.
+default is 0. if tone is needed, plz set this to 1.
 
 =back
 

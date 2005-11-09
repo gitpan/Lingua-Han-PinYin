@@ -1,6 +1,6 @@
 ---
 name: Lingua-Han-PinYin
-version: 0.02
+version: 0.03
 author:
   - 'Fayland, fayland@gmail.com'
 abstract: Retrieve the Mandarin(PinYin) of Chinese character(HanZi).
@@ -11,5 +11,5 @@ requires:
 provides:
   Lingua::Han::PinYin:
     file: lib/Lingua/Han/PinYin.pm
-    version: 0.02
+    version: 0.03
 generated_by: Module::Build version 0.2611

@@ -1,5 +1,0 @@
-lib
-blib
-Han lib/Lingua/Han:
-Lingua lib/Lingua:
-PinYin lib/Lingua/Han/PinYin.pm:

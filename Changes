@@ -4,3 +4,7 @@ Revision history for Perl extension Lingua::Han::PinYin.
 	- original version; created by h2xs 1.23 with options
 		-AXn Lingua::Han::PinYin
 		- change name from Lingua::Han2PinYin
+
+0.02  Mon Nov 7 17:42:44 2005
+	- the tone is added
+	- use the lastest Unicode Unihan, some corrections of words.

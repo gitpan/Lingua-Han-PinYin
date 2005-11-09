@@ -1,10 +1,14 @@
+Build.PL
 Changes
+lib/Lingua/Han/PinYin.pm
+lib/Lingua/Han/PinYin/Mandarin.dat
 Makefile.PL
 MANIFEST
+META.yml			Module meta-data (added by MakeMaker)
+pod2htmd.tmp
+pod2htmi.tmp
 README
 t/1-gb2312.t
 t/2-utf8.t
-lib/Lingua/Han/PinYin.pm
-lib/Lingua/Han/PinYin/PinYin_gb2312.txt
-lib/Lingua/Han/PinYin/PinYin_utf8.txt
-META.yml                                 Module meta-data (added by MakeMaker)
+t/3-gb2312-tone.t
+t/4-utf8-tone.t

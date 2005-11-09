@@ -13,13 +13,14 @@ BEGIN { use_ok('Lingua::Han::PinYin') };
 # Insert your test code below, the Test::More module is use()ed here so read
 # its man page ( perldoc Test::More ) for help writing this test script.
 
-my $h2p = new Lingua::Han::PinYin(format => 'utf8');
+
+my $h2p = new Lingua::Han::PinYin(format => 'utf8', tone => 1);
 is(ref($h2p) => 'Lingua::Han::PinYin', 'class');
 my $pinyin = $h2p->han2pinyin("我");
-is($pinyin, 'wo', 'correct');
+is($pinyin, 'wo3', 'correct');
 $pinyin = $h2p->han2pinyin("少");
-is($pinyin, 'shao', 'correct');
+is($pinyin, 'shao3', 'correct');
 $pinyin = $h2p->han2pinyin("幸");
-is($pinyin, 'xing', 'correct');
+is($pinyin, 'xing4', 'correct');
 $pinyin = $h2p->han2pinyin("爱你");
-is($pinyin, 'aini', 'correct');
+is($pinyin, 'ai4ni3', 'correct');

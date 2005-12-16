@@ -2,7 +2,7 @@ package Lingua::Han::PinYin;
 
 use strict;
 use vars qw($VERSION);
-$VERSION = '0.04';
+$VERSION = '0.05';
 
 use File::Spec;
 use Lingua::Han::Utils qw/Unihan_value/;
@@ -47,6 +47,7 @@ sub han2pinyin {
 
 1;
 __END__
+=encoding utf8
 
 =head1 NAME
 

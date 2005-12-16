@@ -2,11 +2,11 @@ use strict;
 use Module::Build;
 
 my $build = Module::Build->new(
-    create_makefile_pl => 'passthrough',
+    create_makefile_pl  => 'traditional',
     license            => 'perl',
     module_name        => 'Lingua::Han::PinYin',
     requires           => {
-        'Lingua::Han::Utils' => 0,
+        'Lingua::Han::Utils' => '0.05',
         'File::Spec' => 0,
     },
 );

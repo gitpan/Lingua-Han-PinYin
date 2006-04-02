@@ -2,7 +2,7 @@ package Lingua::Han::PinYin;
 
 use strict;
 use vars qw($VERSION);
-$VERSION = '0.05';
+$VERSION = '0.06';
 
 use File::Spec;
 use Lingua::Han::Utils qw/Unihan_value/;
@@ -90,7 +90,11 @@ if not(I mean it's not a Chinese character), returns the original word;
 
 default is 0. if tone is needed, plz set this to 1.
 
-=back
+=back 
+
+=head1 CAVEAT
+
+we convert Ü to V after version 0.06
 
 =head1 SEE ALSO
 

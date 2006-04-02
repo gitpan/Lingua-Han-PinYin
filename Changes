@@ -11,3 +11,6 @@ Revision history for Perl extension Lingua::Han::PinYin.
 
 0.03
 	- can handle the English-Chinese mixed words now.
+	
+0.06
+    - convert Ü to V

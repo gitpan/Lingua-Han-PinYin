@@ -9,6 +9,7 @@ WriteMakefile
                            'Lingua::Han::Utils' => '0.05'
                          },
           'INSTALLDIRS' => 'site',
+          'EXE_FILES' => [],
           'PL_FILES' => {}
         )
 ;

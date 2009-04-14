@@ -2,7 +2,7 @@ package Lingua::Han::PinYin;
 
 use strict;
 use vars qw($VERSION);
-$VERSION = '0.12.1';
+$VERSION = '0.13';
 
 use File::Spec;
 use Lingua::Han::Utils qw/Unihan_value/;

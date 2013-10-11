@@ -1,45 +1,42 @@
 {
-   "abstract" : "Retrieve the Mandarin(PinYin) of Chinese character(HanZi).",
+   "abstract" : "unknown",
    "author" : [
       "unknown"
    ],
    "dynamic_config" : 1,
-   "generated_by" : "Module::Build version 0.4, CPAN::Meta::Converter version 2.112150",
+   "generated_by" : "ExtUtils::MakeMaker version 6.66, CPAN::Meta::Converter version 2.120921",
    "license" : [
-      "perl_5"
+      "unknown"
    ],
    "meta-spec" : {
       "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
       "version" : "2"
    },
    "name" : "Lingua-Han-PinYin",
+   "no_index" : {
+      "directory" : [
+         "t",
+         "inc"
+      ]
+   },
    "prereqs" : {
+      "build" : {
+         "requires" : {
+            "ExtUtils::MakeMaker" : "0"
+         }
+      },
       "configure" : {
          "requires" : {
-            "Module::Build" : "0.4"
+            "ExtUtils::MakeMaker" : "0"
          }
       },
       "runtime" : {
          "requires" : {
-            "File::Spec" : 0,
+            "File::Spec" : "0",
             "Lingua::Han::Utils" : "0.10"
          }
       }
    },
-   "provides" : {
-      "Lingua::Han::PinYin" : {
-         "file" : "lib/Lingua/Han/PinYin.pm",
-         "version" : "0.16"
-      }
-   },
    "release_status" : "stable",
-   "resources" : {
-      "license" : [
-         "http://dev.perl.org/licenses/"
-      ],
-      "repository" : {
-         "url" : "http://github.com/fayland/perl-lingua-han/tree/master"
-      }
-   },
-   "version" : "0.16"
+   "version" : "0.17"
 }

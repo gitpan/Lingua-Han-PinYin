@@ -2,7 +2,7 @@ package Lingua::Han::PinYin;
 
 use strict;
 use warnings;
-our $VERSION = '0.16';
+our $VERSION = '0.17';
 
 use File::Spec ();
 use Lingua::Han::Utils qw/Unihan_value/;
@@ -24,7 +24,7 @@ sub new {
         my ( $uni, $py ) = split(/\s+/, $line);
         $py{$uni} = $py;
     }
-    close$fh;
+    close($fh);
 
     $args{'py'} = \%py;
 
